@@ -61,7 +61,7 @@ def get_conn():
 
 
 def init_db():
-    """Create tables if they don't exist. Called on FastAPI startup."""
+    """Create tables if they don't exist."""
     with get_conn() as conn:
         with conn.cursor() as cur:
             cur.execute("""
